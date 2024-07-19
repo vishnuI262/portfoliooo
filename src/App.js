@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import Ajay from './Components/Ajay';
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'top',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+    });
+
+    sr.reveal('.featured-text-card', {});
+    sr.reveal('.featured-name', { delay: 100 });
+    
+    sr.reveal('.featured-text-info', { delay: 200 });
+    sr.reveal('.featured-text-btn', { delay: 200 });
+    sr.reveal('.social_icons', { delay: 200 });
+    sr.reveal('.featured-image', { delay: 300 });
+    sr.reveal('.project-box', { interval: 200 });
+    sr.reveal('.top-header', {});
+
+    const srLeft = ScrollReveal({
+      origin: 'left',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+    });
+
+    srLeft.reveal('.about-info', { delay: 100 });
+    srLeft.reveal('.contact-info', { delay: 100 });
+
+    const srRight = ScrollReveal({
+      origin: 'right',
+      distance: '80px',
+      duration: 2000,
+      reset: true
+    });
+
+    srRight.reveal('.skills-box', { delay: 100 });
+    srRight.reveal('.form-control', { delay: 100 });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Ajay/>
     </div>
   );
 }
