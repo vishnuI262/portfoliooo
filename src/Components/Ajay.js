@@ -73,7 +73,7 @@ const Ajay = () => {
                 <section className="featured-box" id="home">
                     <div className="featured-text">
                         <div className="featured-text-card">
-                            <span>Ajay C</span>
+                            <span>Vishnu S</span>
                         </div>
                         <div className="featured-name">
                             <p>I'm <span className="typedText"></span></p>
